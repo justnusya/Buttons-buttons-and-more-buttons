@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Buttons__buttons__and_more_buttons
+namespace secondtry
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -31,7 +31,7 @@ namespace Buttons__buttons__and_more_buttons
             int to = int.Parse(To.Text);
             int step = int.Parse(Step.Text);
 
-            for (int i = from; i <= to; i+=step)
+            for (int i = from; i <= to; i += step)
             {
                 Button button = new Button
                 {
