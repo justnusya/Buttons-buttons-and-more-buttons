@@ -7,33 +7,38 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <WrapPanel Name="ButtonsWrapPanel" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Height="252" Margin="15,158,0,0" Width="768" RenderTransformOrigin="0.5,0.5">
-            <WrapPanel.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </WrapPanel.RenderTransform>
-        </WrapPanel>
-        <TextBox x:Name ="From" HorizontalAlignment="Left" Height="23" Margin="54,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="To" HorizontalAlignment="Left" Height="23" Margin="255,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="Step" HorizontalAlignment="Left" Height="23" Margin="456,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="Kratnist" HorizontalAlignment="Left" Height="23" Margin="456,90,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="More_buttons" HorizontalAlignment="Left" Margin="634,46,0,0" VerticalAlignment="Top" Width="117" Click="Button_Click1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.ColumnSpan="4" Grid.Row="3" Fill="#FFFC5EF3" Margin="0,40,0,0"/>
+        <TextBox x:Name ="From" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="23" TextWrapping="Wrap" Width="120"/>
+        <TextBox x:Name ="To" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="23" TextWrapping="Wrap" Width="120"/>
+        <TextBox x:Name ="Step" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="23" TextWrapping="Wrap" Width="120"/>
+        <TextBox x:Name ="Kratnist" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="23" TextWrapping="Wrap" Width="120"/>
+        
+        <Button x:Name="More_buttons" Grid.Column="4" Grid.Row="0" VerticalAlignment="Bottom" Width="117" Click="Button_Click1">
             <Button.Content>
                 <TextBlock Text="Більше кнопок!" TextWrapping="Wrap"/>
             </Button.Content>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="634,90,0,0" VerticalAlignment="Top" Width="117" Click="Button_Click2" Height="23">
+        <Button Grid.Column="4" Grid.Row="1" VerticalAlignment="Bottom" Width="117" Click="Button_Click2" Height="23">
             <Button.Content>
                 <TextBlock Text="Прибери це звідси" TextWrapping="Wrap"/>
             </Button.Content>
         </Button>
-        <Label Content="Від:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="93,15,0,0"/>
-        <Label Content="До:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,15,0,0"/>
-        <Label Content="Крок:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="497,15,0,0"/>
-        <Label Content="Вилучити кнопки кратні.." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="244,87,0,0"/>
+        <Label Content="Від:" Grid.Column="0" Grid.Row="0"  Margin ="0,5,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="До:" Grid.Column="1" Grid.Row="0"  Margin ="0,5,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Крок:" Grid.Column="2" Grid.Row="0"  Margin ="0,5,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Вилучити кнопки кратні.." Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+
+        <WrapPanel Name="ButtonsWrapPanel" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="4" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left"  Margin="10,50,10,10"/>
     </Grid>
 </Window>

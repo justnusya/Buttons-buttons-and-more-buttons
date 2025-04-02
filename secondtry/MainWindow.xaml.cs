@@ -35,7 +35,7 @@ namespace secondtry
             {
                 Button button = new Button
                 {
-                    Content = "Button " + i,
+                    Content = i.ToString(),
                     Width = 100,
                     Height = 30,
                     Margin = new Thickness(5)
