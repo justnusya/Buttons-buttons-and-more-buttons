@@ -7,6 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <WrapPanel Name="ButtonsStackPanel" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Height="196" Margin="425,0,0,0" Width="2"/>
+        <TextBox x:Name ="From" HorizontalAlignment="Left" Height="23" Margin="54,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="To" HorizontalAlignment="Left" Height="23" Margin="255,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="Step" HorizontalAlignment="Left" Height="23" Margin="456,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="Kratnist" HorizontalAlignment="Left" Height="23" Margin="456,90,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="More_buttons" HorizontalAlignment="Left" Margin="683,46,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click">
+            <Button.Content>
+                <TextBlock Text="Більше кнопок!" TextWrapping="Wrap"/>
+            </Button.Content>
+        </Button>
+        <Button x:Name="Remove" HorizontalAlignment="Left" Margin="683,92,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="48">
+            <Button.Content>
+                <TextBlock Text="Прибери це звідси" TextWrapping="Wrap"/>
+            </Button.Content>
+        </Button>
     </Grid>
 </Window>
