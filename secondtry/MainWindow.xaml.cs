@@ -31,7 +31,7 @@ namespace secondtry
             int from = int.Parse(From.Text);
             int to = int.Parse(To.Text);
             int step = int.Parse(Step.Text);
-            if (to >= 10000 || to <= 0)
+            if (to >= 50000 || to <= 0)
             {
                 CustomMessage customMessageBox = new CustomMessage($"Мда, я ж не конвеєр... \nСамі створюйте по {to} кнопок!",
                     "C:\\Users\\Legion\\source\\repos\\Many buttons\\secondtry\\emoji.png");
@@ -93,22 +93,31 @@ namespace secondtry
 
             if (isClicked)
             {
-                CustomMessage customMessageBox = new CustomMessage($"Скільки можна повторювати... \n{buttonValue} — складене число, \nбо можна поділити на {firstDivisor}!",
-                    "C:\\Users\\Legion\\source\\repos\\Many buttons\\secondtry\\emoji.png");
-                customMessageBox.ShowDialog();
+                if (isSkladene)
+                {
+                    CustomMessage customMessageBox = new CustomMessage($"Скільки можна повторювати... \n{buttonValue} — СКЛАДЕНЕ число, \nбо можна поділити на {firstDivisor}!",
+                   "C:\\Users\\Legion\\source\\repos\\Many buttons\\secondtry\\emoji.png");
+                    customMessageBox.ShowDialog();
+                }
+                else
+                {
+                    CustomMessage customMessageBox = new CustomMessage($"Скільки можна повторювати... \n{buttonValue} — ПРОСТЕ число, ПРО-СТЕ!",
+                   "C:\\Users\\Legion\\source\\repos\\Many buttons\\secondtry\\emoji.png");
+                    customMessageBox.ShowDialog();
+                }
             }
             else
             {
                 if (isSkladene)
                 {
                     CustomMessage customMessageBox = new CustomMessage($"{buttonValue} — складене число, бо можна поділити на {firstDivisor}",
-                        "C:\\Users\\Legion\\source\\repos\\Many buttons\\secondtry\\thumb_up.png");
+                        "C:\\Users\\Legion\\source\\repos\\Many buttons\\secondtry\\smile.png");
                     customMessageBox.ShowDialog();
                 }
                 else
                 {
                     CustomMessage customMessageBox = new CustomMessage($"{buttonValue} — просте число",
-                        "C:\\Users\\Legion\\source\\repos\\Many buttons\\secondtry\\thumb_up.png");
+                        "C:\\Users\\Legion\\source\\repos\\Many buttons\\secondtry\\smile.png");
                     customMessageBox.ShowDialog();
                 }
 
