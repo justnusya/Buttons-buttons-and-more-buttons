@@ -43,10 +43,10 @@ namespace Two_options_one_choice
             happysound.Source = new Uri("C:\\Users\\Legion\\source\\repos\\Many buttons\\Two options one choice\\happysound.mp4");
             happysound.Play();
 
-            caption.Visibility = Visibility.Collapsed;
-            YES.Visibility = Visibility.Collapsed;
-            NO.Visibility = Visibility.Collapsed;
-            cutie.Visibility = Visibility.Collapsed;
+            Window.Children.Remove(caption);
+            Window.Children.Remove(YES);
+            Window.Children.Remove(NO);
+            Window.Children.Remove(cutie);
 
             for (int i = 0; i < 6; i++)
             {
@@ -65,11 +65,20 @@ namespace Two_options_one_choice
                 HeartCanvas.Children.Add(heartImage);
             }
 
+            Label label = new Label();
+            label.Content = "Дякую!";
+            label.Margin = new Thickness(300,40,0,0);
+            label.FontSize = 50;
+            label.FontWeight = FontWeights.ExtraBold;
+            label.Foreground = new SolidColorBrush(Color.FromRgb(237, 43, 165));
+            Window.Children.Add(label);
+
             Image newImage = new Image();
 
             newImage.Source = new BitmapImage(new Uri("C:\\Users\\Legion\\source\\repos\\Many buttons\\Two options one choice\\cutie.png"));
             newImage.Width = 100;
             newImage.Height = 100;
+            newImage.Margin = new Thickness(150);
             ImageStackPanel.Children.Add(newImage);
 
             DoubleAnimation widthAnimation = new DoubleAnimation
