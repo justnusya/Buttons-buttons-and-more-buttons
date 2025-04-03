@@ -1,0 +1,24 @@
+﻿<Window x:Class="Two_options_one_choice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Two_options_one_choice"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="Window">
+        <Label x:Name="caption" Content="Поставите додаткові бали?" FontSize="40" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="135,65,118.286,293.714"/>
+        <Button x:Name="YES" Content="ТАК" TextBlock.FontSize="30" TextBlock.FontWeight="ExtraBold" Background="LimeGreen" 
+                VerticalAlignment="Top" Height="70" Width="140" Margin="157,164,467.286,0" Click="YES_Click"/>
+        <Button x:Name="NO" Content="НІ" TextBlock.FontSize="30" TextBlock.FontWeight="ExtraBold" TextBlock.Foreground="DarkRed"
+                Background="IndianRed" VerticalAlignment="Top" Height="70" Width="140" Margin="480,164,144.286,0" MouseEnter="No_etrance" Click="NO_Click"/>
+        <Image x:Name="cutie" Height="170" VerticalAlignment="Bottom" Margin="10" 
+               Source="C:\Users\Legion\source\repos\Many buttons\Two options one choice\cutie.png" />
+        <StackPanel x:Name="ImageStackPanel" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Canvas x:Name="HeartCanvas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <MediaElement x:Name="sadsound" Height="0" Width="0" 
+                      LoadedBehavior="Manual" UnloadedBehavior="Manual" Margin="10" />
+        <MediaElement x:Name="happysound" Height="0" Width="0" 
+                      LoadedBehavior="Manual" UnloadedBehavior="Manual" Margin="10" />
+    </Grid>
+</Window>

@@ -67,18 +67,21 @@ namespace secondtry
         private void Button_Click2(object sender, RoutedEventArgs e)
         {
             int kratnist = int.Parse(Kratnist.Text);
-            List<Button> buttonsToRemove = new List<Button>();
+            if (kratnist != 0)
+            {
+                List<Button> buttonsToRemove = new List<Button>();
 
-            foreach (UIElement element in ButtonsWrapPanel.Children)
-            {
-                if (element is Button button && int.Parse(button.Content.ToString()) % kratnist == 0)
+                foreach (UIElement element in ButtonsWrapPanel.Children)
                 {
-                    buttonsToRemove.Add(button);
+                    if (element is Button button && int.Parse(button.Content.ToString()) % kratnist == 0)
+                    {
+                        buttonsToRemove.Add(button);
+                    }
                 }
-            }
-            foreach (Button button in buttonsToRemove)
-            {
-                ButtonsWrapPanel.Children.Remove(button);
+                foreach (Button button in buttonsToRemove)
+                {
+                    ButtonsWrapPanel.Children.Remove(button);
+                }
             }
         }
         private void Button_Clicked(object sender, RoutedEventArgs e)

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buttons, buttons, and more 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "secondtry", "secondtry\secondtry.csproj", "{2C28ABBF-FCE8-44E7-9811-C060F9B0C44F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Two options one choice", "Two options one choice\Two options one choice.csproj", "{5FB1BBDC-3844-4F4E-9069-068B1011386A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2C28ABBF-FCE8-44E7-9811-C060F9B0C44F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C28ABBF-FCE8-44E7-9811-C060F9B0C44F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C28ABBF-FCE8-44E7-9811-C060F9B0C44F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FB1BBDC-3844-4F4E-9069-068B1011386A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FB1BBDC-3844-4F4E-9069-068B1011386A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FB1BBDC-3844-4F4E-9069-068B1011386A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FB1BBDC-3844-4F4E-9069-068B1011386A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
